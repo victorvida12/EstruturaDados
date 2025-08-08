@@ -1,6 +1,6 @@
 public class Pessoa{
     private String nome;
-    private int idade;
+    public int idade;
     private long cpf;
 
     public Pessoa(){
