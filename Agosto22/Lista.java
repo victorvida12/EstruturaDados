@@ -29,10 +29,10 @@ class Lista<T> {
     public void addFinal(T dado) {
         No<T> novoNo = new No<T>(dado);
         if (ultimoNo ==null) {
+            primeiroNo = novoNo;
             ultimoNo = novoNo;
-            primeiroNo = ultimoNo;
         } else {
-            novoNo.setNextNo(ultimoNo);
+            ultimoNo.setNextNo(novoNo);
             ultimoNo = novoNo;
         }
     }

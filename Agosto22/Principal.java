@@ -7,8 +7,10 @@ public class Principal {
 
         lista.addInicio("Victor");
         lista.addInicio("Rotciv");
-
         lista.imprimeLista();
+        lista.addFinal("====");
+        lista.imprimeLista();
+
 
     }
 }
