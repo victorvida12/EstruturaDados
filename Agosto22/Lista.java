@@ -1,4 +1,3 @@
-
 class Lista<T> {
     private String nomeLista;
     private No<T> primeiroNo;
@@ -26,6 +25,41 @@ class Lista<T> {
         
     }
 
+    public void removeFinal() {
+        if (primeiroNo == null) {
+            System.out.println("Lista vazia!");
+        } else {
+            System.out.println("Dado: " + ultimoNo.getDado() + " removido.");
+            if (primeiroNo == ultimoNo) {
+                primeiroNo = null;
+                ultimoNo = null;
+            } else {
+                No<T> aux = primeiroNo();
+                while (aux.getNextNo() != ultimoNo) {
+                    aux = aux.getNextNo();
+                }
+                ultimoNo = aux;
+                aux.setNextNo(null);
+            }
+        
+
+    }
+
+    public void removeInicio() {
+        if( primeiroNo == null) {
+            System.out.println("Lista vazia!");
+        } else {
+            System.out.println("Dado: " + primeiroNo.getDado() + " removido.");
+
+            if (primeiroNo == ultimoNo) {
+                primeiroNo = null;
+                ultimoNo = null;
+            } else {
+                primeiroNo = primeiroNo.getNextNo();
+            }
+        }
+    }
+
     public void addFinal(T dado) {
         No<T> novoNo = new No<T>(dado);
         if (ultimoNo ==null) {
@@ -46,8 +80,8 @@ class Lista<T> {
             while (aux != null) {
                 System.out.println(aux.getDado());
                 aux = aux.getNextNo();
-
             }
+
         }
     }
 
