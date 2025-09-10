@@ -22,6 +22,15 @@ public class Pilha<T> {
         }
     }
 
+    public T peek() {
+        if (topo == null) {
+            System.out.println("Pilha vazia!");
+            return null;
+        } else {
+            return topo.getDado();     
+        }
+    }
+
     public T pop() {
         if (topo == null) {
             System.out.println("Pilha vazia!");
