@@ -48,7 +48,7 @@ public class ListaCircular {
             return null;
         } else {
             T dadoTemp = primeiroNo.getDado();
-            if (primeiroNo = primeiroNo.getNextNo()) {
+            if (primeiroNo == primeiroNo.getNextNo()) {
                 primeiroNo = null;
                 ultimoNo = null;
                 tamanho--;
